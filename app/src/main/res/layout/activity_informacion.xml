@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="413dp"
+        android:layout_height="786dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:text="Preguntas Frecuentes"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:text="¿ Como Reservo Asientos ?"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="417dp"
+                android:text="Para realizar la reserva de tus asientos de un bus te sugerimos revisar la sección en el menú de “Red de Buses” donde podrás visualizar el bus y la tabla de paradas y direcciones que recorrerá el próximo día. Ya definido el bus que usaras, podrás seleccionarlo en la misma sección de “Red de Buses” o volver al menú de inicio y dirigirse a la sección “Reserva”, si te encuentras en la sección “Reservas” elegirás el bus que visualizaste previamente y la aplicación te llevara a la próxima ventana. En este punto nos encontramos en el mismo camino, si tomaste el de seleccionar el bus en la sección “Red de Buses” o en la sección de “Reservas”, ahora, confirmaremos toda la información que se había analizado previamente y procederán a seleccionar un horario, el cual será el horario de salida del bus. El próximo paso será seleccionar los asientos que deseas reservar (Los asientos presentan tres estados, verde, si esta disponible, azul, si has seleccionado el asiento, rojo, el asiento se encuentra ocupado/reservado). Luego procederás a pagar la reserva con el dinero que hayas recargado en la aplicación, en caso de no tener dinero, dirigirse a la pregunta ¿Cómo recargo dinero? Al pagar la reserva se le enseñará su factura respectiva, la cual le deberá tomar un pantallazo para presentarla antes de subir al bus. Feliz viaje."
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:text="¿ Como Recargo Dinero ?"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="207dp"
+                android:text="Para recargar dinero en la aplicación, en el menú, debes dirigirte a la sección “Recarga” allí, ingresaras toda la información correspondiente a una tarjeta de crédito propia del usuario y seguido de esto, el monto que deseas recargarle a la aplicación, al presionar el botón recargar, se mostrará tu factura correspondiente a la transferencia y tu cuenta del aplicativo se actualizará. En caso de que desees realizar más recargas, la información de tu tarjeta como ya fue registrada, aparecerá como predeterminado en las casillas, y el procedimiento se resumiría a solo ingresar el monto que desees recargar y ya. Feliz viaje."
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inicio" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

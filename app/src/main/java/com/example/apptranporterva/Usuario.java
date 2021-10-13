@@ -1,6 +1,8 @@
 package com.example.apptranporterva;
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable {
 
     private String nombre;
     private String correo;
@@ -48,5 +50,6 @@ public class Usuario {
         setCorreo(correo);
         setPassword(password);
         setCelular(celular);
+        setSaldo(0);
     }
 }

@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/bus_4_icon" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textViewUserNameR"
         android:layout_width="131dp"
         android:layout_height="22dp"
         android:autoText="false"
@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.039" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textViewUserMoneyR"
         android:layout_width="131dp"
         android:layout_height="22dp"
         android:clickable="false"
@@ -60,7 +60,7 @@
         app:layout_constraintVertical_bias="0.158" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/editTextRNumT"
         android:layout_width="340dp"
         android:layout_height="37dp"
         android:ems="10"
@@ -73,7 +73,7 @@
         app:layout_constraintVertical_bias="0.279" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextRNombreT"
         android:layout_width="307dp"
         android:layout_height="39dp"
         android:ems="10"
@@ -85,7 +85,7 @@
         app:layout_constraintVertical_bias="0.393" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/editTextRVenci1"
         android:layout_width="42dp"
         android:layout_height="31dp"
         android:ems="10"
@@ -112,7 +112,7 @@
         app:layout_constraintVertical_bias="0.516" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/editTextRVenci2"
         android:layout_width="42dp"
         android:layout_height="31dp"
         android:ems="10"
@@ -125,7 +125,7 @@
         app:layout_constraintVertical_bias="0.514" />
 
     <EditText
-        android:id="@+id/editTextNumber4"
+        android:id="@+id/editTextRSeguridad"
         android:layout_width="128dp"
         android:layout_height="31dp"
         android:ems="10"
@@ -138,7 +138,7 @@
         app:layout_constraintVertical_bias="0.508" />
 
     <EditText
-        android:id="@+id/editTextNumber5"
+        android:id="@+id/editTextRMonto"
         android:layout_width="250dp"
         android:layout_height="42dp"
         android:ems="10"
@@ -151,7 +151,7 @@
         app:layout_constraintVertical_bias="0.631" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonRRecarga"
         android:layout_width="143dp"
         android:layout_height="50dp"
         android:text="Recargar"

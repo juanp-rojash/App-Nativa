@@ -43,7 +43,7 @@
         app:layout_constraintVertical_bias="0.478" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textViewRegistrarme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registrarme"
@@ -55,7 +55,7 @@
         app:layout_constraintVertical_bias="0.936" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress3"
+        android:id="@+id/editTextIEmail"
         android:layout_width="323dp"
         android:layout_height="46dp"
         android:ems="10"
@@ -67,7 +67,7 @@
         app:layout_constraintVertical_bias="0.372" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/editTextIPassword"
         android:layout_width="293dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -79,7 +79,7 @@
         app:layout_constraintVertical_bias="0.543" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonInicio"
         android:layout_width="135dp"
         android:layout_height="42dp"
         android:text="Iniciar"

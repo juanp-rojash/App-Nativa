@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/bus_4_icon" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextRNombre"
         android:layout_width="277dp"
         android:layout_height="43dp"
         android:ems="10"
@@ -40,7 +40,7 @@
         app:layout_constraintVertical_bias="0.251" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registrarme"
@@ -52,7 +52,7 @@
         app:layout_constraintVertical_bias="0.816" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editTextREmail"
         android:layout_width="273dp"
         android:layout_height="46dp"
         android:ems="10"
@@ -77,7 +77,7 @@
         app:layout_constraintVertical_bias="0.481" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextRPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -102,7 +102,7 @@
         app:layout_constraintVertical_bias="0.596" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/editTextRCelular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

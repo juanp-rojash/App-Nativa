@@ -1,6 +1,8 @@
 package com.example.apptranporterva;
 
-public class Asiento {
+import java.io.Serializable;
+
+public class Asiento implements Serializable {
 
     private String id;
     private boolean reservado;

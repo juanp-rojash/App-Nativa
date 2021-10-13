@@ -60,11 +60,6 @@
                 android:text="Para recargar dinero en la aplicación, en el menú, debes dirigirte a la sección “Recarga” allí, ingresaras toda la información correspondiente a una tarjeta de crédito propia del usuario y seguido de esto, el monto que deseas recargarle a la aplicación, al presionar el botón recargar, se mostrará tu factura correspondiente a la transferencia y tu cuenta del aplicativo se actualizará. En caso de que desees realizar más recargas, la información de tu tarjeta como ya fue registrada, aparecerá como predeterminado en las casillas, y el procedimiento se resumiría a solo ingresar el monto que desees recargar y ya. Feliz viaje."
                 android:textAlignment="center" />
 
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Inicio" />
         </LinearLayout>
     </ScrollView>
 

@@ -18,6 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RegistroActivity"></activity>
+        <activity android:name=".MenuActivity"></activity>
+        <activity android:name=".ReservaP1Activity"></activity>
+        <activity android:name=".ReservaP2Activity"></activity>
+        <activity android:name=".ReservaP3Activity"></activity>
+        <activity android:name=".RecargaActivity"></activity>
+        <activity android:name=".InformacionActivity"></activity>
+        <activity android:name=".RedBusesActivity"></activity>
+        <activity android:name=".FacturaActivity"></activity>
     </application>
 
 </manifest>

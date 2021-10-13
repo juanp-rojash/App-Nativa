@@ -58,7 +58,7 @@
         app:layout_constraintVertical_bias="0.272" />
 
     <TextView
-        android:id="@+id/textView53"
+        android:id="@+id/textViewFid"
         android:layout_width="61dp"
         android:layout_height="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,7 +69,7 @@
         app:layout_constraintVertical_bias="0.224" />
 
     <TextView
-        android:id="@+id/textView56"
+        android:id="@+id/textViewFcosto"
         android:layout_width="61dp"
         android:layout_height="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,7 +80,7 @@
         app:layout_constraintVertical_bias="0.271" />
 
     <TextView
-        android:id="@+id/textView58"
+        android:id="@+id/textViewFasientos"
         android:layout_width="61dp"
         android:layout_height="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,7 +91,7 @@
         app:layout_constraintVertical_bias="0.323" />
 
     <TextView
-        android:id="@+id/textView60"
+        android:id="@+id/textViewFidReserva"
         android:layout_width="61dp"
         android:layout_height="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -114,7 +114,7 @@
         app:layout_constraintVertical_bias="0.148" />
 
     <TextView
-        android:id="@+id/textView50"
+        android:id="@+id/textViewUserMoneyF"
         android:layout_width="131dp"
         android:layout_height="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -125,7 +125,7 @@
         app:layout_constraintVertical_bias="0.039" />
 
     <TextView
-        android:id="@+id/textView51"
+        android:id="@+id/textViewUserNameF"
         android:layout_width="131dp"
         android:layout_height="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -148,7 +148,7 @@
         app:srcCompat="@drawable/bus_4_icon" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/buttonFinicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Inicio"

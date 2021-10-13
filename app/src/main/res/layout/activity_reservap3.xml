@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <Switch
-        android:id="@+id/switch3"
+        android:id="@+id/switchRes3_3"
         android:layout_width="100dp"
         android:layout_height="30dp"
         android:text="8:00 AM"
@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="0.305" />
 
     <ImageView
-        android:id="@+id/imageView27"
+        android:id="@+id/imageViewe3"
         android:layout_width="40dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/silla" />
 
     <ImageView
-        android:id="@+id/imageView26"
+        android:id="@+id/imageViewd3"
         android:layout_width="40dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,7 +42,7 @@
         app:srcCompat="@drawable/silla" />
 
     <ImageView
-        android:id="@+id/imageView25"
+        android:id="@+id/imageViewb3"
         android:layout_width="40dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,7 +54,7 @@
         app:srcCompat="@drawable/silla" />
 
     <ImageView
-        android:id="@+id/imageView24"
+        android:id="@+id/imageViewa3"
         android:layout_width="40dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,7 +66,7 @@
         app:srcCompat="@drawable/silla" />
 
     <ImageView
-        android:id="@+id/imageView23"
+        android:id="@+id/imageViewe2"
         android:layout_width="40dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,7 +78,7 @@
         app:srcCompat="@drawable/silla" />
 
     <ImageView
-        android:id="@+id/imageView21"
+        android:id="@+id/imageViewb2"
         android:layout_width="40dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,7 +90,7 @@
         app:srcCompat="@drawable/silla" />
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/imageViewd2"
         android:layout_width="40dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -102,7 +102,7 @@
         app:srcCompat="@drawable/silla" />
 
     <ImageView
-        android:id="@+id/imageView20"
+        android:id="@+id/imageViewa2"
         android:layout_width="40dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -114,7 +114,7 @@
         app:srcCompat="@drawable/silla" />
 
     <ImageView
-        android:id="@+id/imageView19"
+        android:id="@+id/imageViewe1"
         android:layout_width="40dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -126,7 +126,7 @@
         app:srcCompat="@drawable/silla" />
 
     <ImageView
-        android:id="@+id/imageView18"
+        android:id="@+id/imageViewd1"
         android:layout_width="40dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -138,7 +138,7 @@
         app:srcCompat="@drawable/silla" />
 
     <ImageView
-        android:id="@+id/imageView17"
+        android:id="@+id/imageViewc1"
         android:layout_width="40dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -233,7 +233,7 @@
         app:layout_constraintVertical_bias="0.039" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/imageViewa1"
         android:layout_width="40dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -245,7 +245,7 @@
         app:srcCompat="@drawable/silla" />
 
     <ImageView
-        android:id="@+id/imageView16"
+        android:id="@+id/imageViewb1"
         android:layout_width="40dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -257,7 +257,7 @@
         app:srcCompat="@drawable/silla" />
 
     <TextView
-        android:id="@+id/textView49"
+        android:id="@+id/textViewRes3Costo"
         android:layout_width="61dp"
         android:layout_height="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -268,7 +268,7 @@
         app:layout_constraintVertical_bias="0.684" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/buttonRes3Compra"
         android:layout_width="136dp"
         android:layout_height="62dp"
         android:text="Comprar"
@@ -280,9 +280,10 @@
         app:layout_constraintVertical_bias="0.817" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/switchRes3_1"
         android:layout_width="100dp"
         android:layout_height="30dp"
+        android:onClick="onclick"
         android:text="6:00 AM"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -292,7 +293,7 @@
         app:layout_constraintVertical_bias="0.305" />
 
     <Switch
-        android:id="@+id/switch2"
+        android:id="@+id/switchRes3_2"
         android:layout_width="100dp"
         android:layout_height="30dp"
         android:text="7:00 AM"

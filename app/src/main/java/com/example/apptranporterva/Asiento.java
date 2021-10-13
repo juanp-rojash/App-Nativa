@@ -16,14 +16,14 @@ public class Asiento implements Serializable {
         this.id = id;
     }
 
-    public boolean isReservado() {
+    public boolean getReservado() {
         return reservado;
     }
     public void setReservado(boolean reservado) {
         this.reservado = reservado;
     }
 
-    public boolean isSeperado() {
+    public boolean getSeperado() {
         return seperado;
     }
     public void setSeperado(boolean seperado) {

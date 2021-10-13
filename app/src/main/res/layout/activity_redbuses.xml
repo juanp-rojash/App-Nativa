@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/bus_4_icon" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/textViewUserNameRed"
         android:layout_width="131dp"
         android:layout_height="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,7 +29,7 @@
         app:layout_constraintVertical_bias="0.039" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/textViewUserMoneyRed"
         android:layout_width="131dp"
         android:layout_height="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -64,7 +64,7 @@
         app:layout_constraintVertical_bias="0.244" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageViewRedBus"
         android:layout_width="364dp"
         android:layout_height="102dp"
         app:layout_constraintBottom_toBottomOf="parent"

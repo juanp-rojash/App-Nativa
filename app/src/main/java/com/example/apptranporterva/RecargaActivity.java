@@ -28,6 +28,9 @@ public class RecargaActivity extends AppCompatActivity {
         TextView tvnombre = (TextView) findViewById(R.id.textViewUserNameR);
         TextView tvsaldo = (TextView) findViewById(R.id.textViewUserMoneyR);
 
+        tvnombre.setText(user.getNombre());
+        tvsaldo.setText(user.getSaldo());
+
         EditText etNumeroT = (EditText) findViewById(R.id.editTextRNumT);
         EditText etNombreT = (EditText) findViewById(R.id.editTextRNombreT);
         EditText etVenc1 = (EditText) findViewById(R.id.editTextRVenci1);

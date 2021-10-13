@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="0.244" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/imageViewRes1"
         android:layout_width="481dp"
         android:layout_height="161dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,7 +54,7 @@
         app:srcCompat="@drawable/bus_4_icon" />
 
     <TextView
-        android:id="@+id/textView36"
+        android:id="@+id/textViewUserNameRes1"
         android:layout_width="131dp"
         android:layout_height="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,7 +65,7 @@
         app:layout_constraintVertical_bias="0.039" />
 
     <TextView
-        android:id="@+id/textView37"
+        android:id="@+id/textViewUserMoneyRes1"
         android:layout_width="131dp"
         android:layout_height="22dp"
         app:layout_constraintBottom_toBottomOf="parent"

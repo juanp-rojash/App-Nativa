@@ -24,7 +24,7 @@ public class MenuActivity extends AppCompatActivity{
         TextView tvsaldo = (TextView) findViewById(R.id.textViewUserMoney);
 
         tvnombre.setText(user.getNombre());
-        tvsaldo.setText(user.getSaldo());
+        tvsaldo.setText(Integer.toString(user.getSaldo()));
 
         Button btnReserva = (Button) findViewById(R.id.buttonMReserva);
         Button btnRedBuses = (Button) findViewById(R.id.buttonMRedBus);

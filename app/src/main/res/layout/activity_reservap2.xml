@@ -18,9 +18,10 @@
         app:srcCompat="@drawable/bus_4_icon" />
 
     <TextView
-        android:id="@+id/textView40"
+        android:id="@+id/textViewUserMoneyRes2"
         android:layout_width="131dp"
         android:layout_height="22dp"
+        android:text=" "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.942"
@@ -29,9 +30,10 @@
         app:layout_constraintVertical_bias="0.039" />
 
     <TextView
-        android:id="@+id/textView41"
+        android:id="@+id/textViewUserNameRes2"
         android:layout_width="131dp"
         android:layout_height="22dp"
+        android:text=" "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.435"

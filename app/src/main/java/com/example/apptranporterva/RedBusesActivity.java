@@ -24,7 +24,7 @@ public class RedBusesActivity extends AppCompatActivity {
         TextView tvsaldo = (TextView) findViewById(R.id.textViewUserMoneyRed);
 
         tvnombre.setText(user.getNombre());
-        tvsaldo.setText(user.getSaldo());
+        tvsaldo.setText(Integer.toString(user.getSaldo()));
 
         ImageView iv = (ImageView) findViewById(R.id.imageViewRedBus);
 

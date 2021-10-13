@@ -29,7 +29,7 @@ public class RecargaActivity extends AppCompatActivity {
         TextView tvsaldo = (TextView) findViewById(R.id.textViewUserMoneyR);
 
         tvnombre.setText(user.getNombre());
-        tvsaldo.setText(user.getSaldo());
+        tvsaldo.setText(Integer.toString(user.getSaldo()));
 
         EditText etNumeroT = (EditText) findViewById(R.id.editTextRNumT);
         EditText etNombreT = (EditText) findViewById(R.id.editTextRNombreT);

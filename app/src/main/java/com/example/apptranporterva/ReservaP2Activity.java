@@ -20,11 +20,11 @@ public class ReservaP2Activity extends AppCompatActivity {
         Bundle recibir = getIntent().getExtras();
         user = (Usuario) recibir.getSerializable("Usuario");
 
-        TextView tvnombre = (TextView) findViewById(R.id.textViewUserNameR);
-        TextView tvsaldo = (TextView) findViewById(R.id.textViewUserMoneyR);
+        TextView tvnombre = (TextView) findViewById(R.id.textViewUserNameRes2);
+        TextView tvsaldo = (TextView) findViewById(R.id.textViewUserMoneyRes2);
 
         tvnombre.setText(user.getNombre());
-        tvsaldo.setText(user.getSaldo());
+        tvsaldo.setText(Integer.toString(user.getSaldo()));
 
         Button btnContinuar = (Button) findViewById(R.id.buttonRes2);
 

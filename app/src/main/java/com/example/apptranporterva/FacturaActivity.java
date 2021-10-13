@@ -26,7 +26,7 @@ public class FacturaActivity extends AppCompatActivity {
         TextView tvsaldo = (TextView) findViewById(R.id.textViewUserMoneyF);
 
         tvnombre.setText(user.getNombre());
-        tvsaldo.setText(user.getSaldo());
+        tvsaldo.setText(Integer.toString(user.getSaldo()));
 
         TextView tvidF = (TextView) findViewById(R.id.textViewFid);
         TextView tvcostoF = (TextView) findViewById(R.id.textViewFcosto);
@@ -37,7 +37,7 @@ public class FacturaActivity extends AppCompatActivity {
         String sillasR = "";
 
         tvidF.setText(factura.getId());
-        tvcostoF.setText(factura.getCosto());
+        tvcostoF.setText(Integer.toString(user.getSaldo()));
 
         for(int i=0; i<factura.getSillas().length; i++){
             sillasR += " " + factura.getSillas()[i].getId() + " - ";

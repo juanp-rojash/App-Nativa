@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MenuActivity extends AppCompatActivity{
 
     Usuario user;
+    Transferencia tmp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class MenuActivity extends AppCompatActivity{
 
         Bundle recibir = getIntent().getExtras();
         user = (Usuario) recibir.getSerializable("Usuario");
+        tmp = (Transferencia) recibir.getSerializable("Estado");
 
         TextView tvnombre = (TextView) findViewById(R.id.textViewUserName);
         TextView tvsaldo = (TextView) findViewById(R.id.textViewUserMoney);
@@ -33,6 +35,7 @@ public class MenuActivity extends AppCompatActivity{
 
         Bundle bundle = new Bundle();
         bundle.putSerializable("Usuario", user);
+        bundle.putSerializable("Estado", tmp);
 
         btnReserva.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -12,6 +12,7 @@ public class FacturaActivity extends AppCompatActivity {
 
     Usuario user;
     Reserva factura;
+    Transferencia tmp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class FacturaActivity extends AppCompatActivity {
         Bundle recibir = getIntent().getExtras();
         user = (Usuario) recibir.getSerializable("Usuario");
         factura = (Reserva) recibir.getSerializable("Factura") ;
+        tmp = (Transferencia) recibir.getSerializable("Estado");
 
         TextView tvnombre = (TextView) findViewById(R.id.textViewUserNameF);
         TextView tvsaldo = (TextView) findViewById(R.id.textViewUserMoneyF);
@@ -34,16 +36,11 @@ public class FacturaActivity extends AppCompatActivity {
         TextView tvidR = (TextView) findViewById(R.id.textViewFidReserva);
 
         int numeroAleatorio = (int) (Math.random()*100+1);
-        String sillasR = "";
 
         tvidF.setText(factura.getId());
-        tvcostoF.setText(Integer.toString(user.getSaldo()));
+        tvcostoF.setText(Integer.toString(factura.getCosto()));
 
-        for(int i=0; i<factura.getSillas().length; i++){
-            sillasR += " " + factura.getSillas()[i].getId() + " - ";
-        }
-
-        tvasientosF.setText(sillasR);
+        tvasientosF.setText(factura.getSillas());
         tvidR.setText(Integer.toString(numeroAleatorio));
 
         Button btninicio = (Button) findViewById(R.id.buttonFinicio);
@@ -55,6 +52,7 @@ public class FacturaActivity extends AppCompatActivity {
 
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("Usuario", user);
+                bundle.putSerializable("Estado", tmp);
 
                 intent.putExtras(bundle);
                 startActivity(intent);

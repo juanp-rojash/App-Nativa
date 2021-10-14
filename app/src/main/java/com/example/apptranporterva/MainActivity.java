@@ -15,8 +15,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Usuario registrado;
+    Usuario registrado = new Usuario();
     String correo, password;
+    static boolean registro = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, RegistroActivity.class);
+                registro = true;
                 startActivity(intent);
             }
         });
@@ -39,25 +41,31 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bundle recibir = getIntent().getExtras();
-                registrado = (Usuario) recibir.getSerializable("Usuario");
 
-                correo = etCorreo.getText().toString();
-                password = etPassword.getText().toString();
+                if(registro){
+                    Bundle recibir = getIntent().getExtras();
+                    registrado = (Usuario) recibir.getSerializable("Usuario");
 
-                if (TextUtils.isEmpty(correo) || TextUtils.isEmpty(password)){
-                    Toast.makeText(MainActivity.this, "Error en los datos, ingreselos de manera correcta", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    if(correo.equals(registrado.getCorreo()) && password.equals(registrado.getPassword())){
-                        Intent intentMenu = new Intent(MainActivity.this, MenuActivity.class);
+                    correo = etCorreo.getText().toString();
+                    password = etPassword.getText().toString();
 
-                        Bundle bundle = new Bundle();
-                        bundle.putSerializable("Usuario", registrado);
-
-                        intentMenu.putExtras(bundle);
-                        startActivity(intentMenu);
+                    if (TextUtils.isEmpty(correo) || TextUtils.isEmpty(password)){
+                        Toast.makeText(MainActivity.this, "Error en los datos, ingreselos de manera correcta", Toast.LENGTH_SHORT).show();
                     }
+                    else {
+                        if(correo.equals(registrado.getCorreo()) && password.equals(registrado.getPassword())){
+                            Intent intentMenu = new Intent(MainActivity.this, MenuActivity.class);
+
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("Usuario", registrado);
+
+                            intentMenu.putExtras(bundle);
+                            startActivity(intentMenu);
+                        }
+                    }
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "Error en los datos, registrese", Toast.LENGTH_SHORT).show();
                 }
             }
         });

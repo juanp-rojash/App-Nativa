@@ -52,4 +52,12 @@ public class Usuario implements Serializable {
         setCelular(celular);
         setSaldo(0);
     }
+
+    public Usuario() {
+        setNombre("");
+        setCorreo("");
+        setPassword("");
+        setCelular("");
+        setSaldo(0);
+    }
 }

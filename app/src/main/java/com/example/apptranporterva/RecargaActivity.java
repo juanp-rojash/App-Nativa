@@ -14,8 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class RecargaActivity extends AppCompatActivity {
 
     Usuario user;
-    String numeroTarjeta, nombreTitular, venc1, venc2, seguridad;
-    int monto;
+    Transferencia tmp;
+    String numeroTarjeta, nombreTitular, venc1, venc2, seguridad, monto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class RecargaActivity extends AppCompatActivity {
 
         Bundle recibir = getIntent().getExtras();
         user = (Usuario) recibir.getSerializable("Usuario");
+        tmp = (Transferencia) recibir.getSerializable("Estado");
 
         TextView tvnombre = (TextView) findViewById(R.id.textViewUserNameR);
         TextView tvsaldo = (TextView) findViewById(R.id.textViewUserMoneyR);
@@ -48,19 +49,20 @@ public class RecargaActivity extends AppCompatActivity {
                 venc1 = etVenc1.getText().toString();
                 venc2 = etVenc2.getText().toString();
                 seguridad = etSeguridad.getText().toString();
-                monto = Integer.parseInt(etMonto.getText().toString());
+                monto = etMonto.getText().toString();
 
-                if(TextUtils.isEmpty(numeroTarjeta) || TextUtils.isEmpty(nombreTitular) || TextUtils.isEmpty(venc1) || TextUtils.isEmpty(venc2) || TextUtils.isEmpty(seguridad) || monto == 0 ){
+                if(TextUtils.isEmpty(numeroTarjeta) || TextUtils.isEmpty(nombreTitular) || TextUtils.isEmpty(venc1) || TextUtils.isEmpty(venc2) || TextUtils.isEmpty(seguridad) || TextUtils.isEmpty(monto) ){
                     Toast.makeText(RecargaActivity.this, "Error en los datos, ingreselos de manera correcta", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     Toast.makeText(RecargaActivity.this, "Recarga exitosa", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(RecargaActivity.this, MenuActivity.class);
 
-                    user.setSaldo(user.getSaldo() + monto);
+                    user.setSaldo(user.getSaldo() + Integer.parseInt(monto));
 
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("Usuario", user);
+                    bundle.putSerializable("Estado", tmp);
 
                     intent.putExtras(bundle);
                     startActivity(intent);

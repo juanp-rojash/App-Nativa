@@ -4,14 +4,14 @@ import java.io.Serializable;
 
 public class Reserva implements Serializable {
 
-    private Asiento[] sillas;
+    private String sillas;
     private String id;
     private int costo;
 
-    public Asiento[] getSillas() {
+    public String getSillas() {
         return sillas;
     }
-    public void setSillas(Asiento[] sillas) {
+    public void setSillas(String sillas) {
         this.sillas = sillas;
     }
 
@@ -29,15 +29,14 @@ public class Reserva implements Serializable {
         this.costo = costo;
     }
 
-    public Reserva(Asiento[] sillas, String id) {
+    public Reserva(String sillas, String id) {
         int suma = 0;
+        String[] separar = sillas.split(",");
 
         setSillas(sillas);
         setId(id);
 
-        for(int i=0; i<sillas.length; i++){
-            suma += sillas[i].getValor();
-        }
+        suma = separar.length * 10000;
 
         setCosto(suma);
     }

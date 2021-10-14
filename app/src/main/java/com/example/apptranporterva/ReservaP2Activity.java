@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ReservaP2Activity extends AppCompatActivity {
 
     Usuario user;
+    Transferencia tmp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class ReservaP2Activity extends AppCompatActivity {
 
         Bundle recibir = getIntent().getExtras();
         user = (Usuario) recibir.getSerializable("Usuario");
+        tmp = (Transferencia) recibir.getSerializable("Estado");
 
         TextView tvnombre = (TextView) findViewById(R.id.textViewUserNameRes2);
         TextView tvsaldo = (TextView) findViewById(R.id.textViewUserMoneyRes2);
@@ -35,6 +37,7 @@ public class ReservaP2Activity extends AppCompatActivity {
 
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("Usuario", user);
+                bundle.putSerializable("Estado", tmp);
 
                 intent.putExtras(bundle);
                 startActivity(intent);

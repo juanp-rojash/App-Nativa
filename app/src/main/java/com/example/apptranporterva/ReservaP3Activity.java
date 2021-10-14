@@ -2,6 +2,7 @@ package com.example.apptranporterva;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -14,7 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ReservaP3Activity extends AppCompatActivity {
 
     Usuario user;
-    int costo = 0, contReserva = 0;
+    Transferencia tmp;
+    int costo = 0;
     Switch switch1, switch2, switch3;
     boolean sa1 = false, sa2 = false, sa3 = false, sb1 = false, sb2 = false,
             sb3 = false, sc1 = false, sd1 = false, sd2 = false, sd3 = false,
@@ -22,20 +24,22 @@ public class ReservaP3Activity extends AppCompatActivity {
     ImageView a1, a2, a3, b1, b2, b3, c1, d1, d2, d3, e1, e2, e3;
     TextView tvCosto;
     Button btnCompra;
+    static boolean bund = false;
 
-    static Asiento A1 = new Asiento("a1");
-    static Asiento A2 = new Asiento("a2");
-    static Asiento A3 = new Asiento("a3");
-    static Asiento B1 = new Asiento("b4");
-    static Asiento B2 = new Asiento("b5");
-    static Asiento B3 = new Asiento("b6");
-    static Asiento C1 = new Asiento("c7");
-    static Asiento D1 = new Asiento("d8");
-    static Asiento D2 = new Asiento("d9");
-    static Asiento D3 = new Asiento("d10");
-    static Asiento E1 = new Asiento("e11");
-    static Asiento E2 = new Asiento("e12");
-    static Asiento E3 = new Asiento("e13");
+
+    Asiento A1 = new Asiento("a1");
+    Asiento A2 = new Asiento("a2");
+    Asiento A3 = new Asiento("a3");
+    Asiento B1 = new Asiento("b4");
+    Asiento B2 = new Asiento("b5");
+    Asiento B3 = new Asiento("b6");
+    Asiento C1 = new Asiento("c7");
+    Asiento D1 = new Asiento("d8");
+    Asiento D2 = new Asiento("d9");
+    Asiento D3 = new Asiento("d10");
+    Asiento E1 = new Asiento("e11");
+    Asiento E2 = new Asiento("e12");
+    Asiento E3 = new Asiento("e13");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +76,38 @@ public class ReservaP3Activity extends AppCompatActivity {
         tvCosto = (TextView) findViewById(R.id.textViewRes3Costo);
 
         btnCompra = (Button) findViewById(R.id.buttonRes3Compra);
+
+        if(bund){
+            tmp = (Transferencia) recibir.getSerializable("Estado");
+
+            A1 = tmp.getA1();
+            A2 = tmp.getA2();
+            A3 = tmp.getA3();
+            B1 = tmp.getB1();
+            B2 = tmp.getB2();
+            B3 = tmp.getB3();
+            C1 = tmp.getC1();
+            D1 = tmp.getD1();
+            D2 = tmp.getD2();
+            D3 = tmp.getD3();
+            E1 = tmp.getE1();
+            E2 = tmp.getE2();
+            E3 = tmp.getE3();
+
+            if (A1.getReservado()) a1.setImageResource(R.drawable.sillar);
+            if (A2.getReservado()) a2.setImageResource(R.drawable.sillar);
+            if (A3.getReservado()) a3.setImageResource(R.drawable.sillar);
+            if (B1.getReservado()) b1.setImageResource(R.drawable.sillar);
+            if (B2.getReservado()) b2.setImageResource(R.drawable.sillar);
+            if (B3.getReservado()) b3.setImageResource(R.drawable.sillar);
+            if (C1.getReservado()) c1.setImageResource(R.drawable.sillar);
+            if (D1.getReservado()) d1.setImageResource(R.drawable.sillar);
+            if (D2.getReservado()) d2.setImageResource(R.drawable.sillar);
+            if (D3.getReservado()) d3.setImageResource(R.drawable.sillar);
+            if (E1.getReservado()) e1.setImageResource(R.drawable.sillar);
+            if (E2.getReservado()) e2.setImageResource(R.drawable.sillar);
+            if (E3.getReservado()) e3.setImageResource(R.drawable.sillar);
+        }
     }
 
     public void onclick(View view){
@@ -101,7 +137,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sa1 = true;
                 costo += A1.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva++;
             }
             else {
                 A1.setSeperado(false);
@@ -109,7 +144,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sa1 = false;
                 costo = costo - A1.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva--;
             }
         }
         else if (view.getId() == R.id.imageViewa2 && A2.getReservado() == false){
@@ -119,7 +153,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sa2 = true;
                 costo += A2.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva++;
             }
             else {
                 A2.setSeperado(false);
@@ -127,7 +160,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sa2 = false;
                 costo = costo - A2.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva--;
             }
         }
         else if (view.getId() == R.id.imageViewa3 && A3.getReservado() == false){
@@ -137,7 +169,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sa3 = true;
                 costo += A3.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva++;
             }
             else {
                 A3.setSeperado(false);
@@ -145,7 +176,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sa3 = false;
                 costo = costo - A3.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva--;
             }
         }
         else if (view.getId() == R.id.imageViewb1 && B1.getReservado() == false){
@@ -155,7 +185,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sb1 = true;
                 costo += B1.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva++;
             }
             else {
                 B1.setSeperado(false);
@@ -163,7 +192,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sb1 = false;
                 costo = costo - B1.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva--;
             }
         }
         else if (view.getId() == R.id.imageViewb2 && B2.getReservado() == false){
@@ -173,7 +201,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sb2 = true;
                 costo += B2.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva++;
             }
             else {
                 B2.setSeperado(false);
@@ -181,7 +208,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sb2 = false;
                 costo = costo - B2.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva--;
             }
         }
         else if (view.getId() == R.id.imageViewb3 && B3.getReservado() == false){
@@ -191,7 +217,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sb3 = true;
                 costo += B3.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva++;
             }
             else {
                 B3.setSeperado(false);
@@ -199,7 +224,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sb3 = false;
                 costo = costo - B3.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva--;
             }
         }
         else if (view.getId() == R.id.imageViewc1 && C1.getReservado() == false){
@@ -209,7 +233,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sc1 = true;
                 costo += C1.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva++;
             }
             else {
                 C1.setSeperado(false);
@@ -217,7 +240,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sc1 = false;
                 costo = costo - C1.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva--;
             }
         }
         else if (view.getId() == R.id.imageViewd1 && D1.getReservado() == false){
@@ -227,7 +249,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sd1 = true;
                 costo += D1.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva++;
             }
             else {
                 D1.setSeperado(false);
@@ -235,7 +256,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sd1 = false;
                 costo = costo - D1.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva--;
             }
         }
         else if (view.getId() == R.id.imageViewd2 && D2.getReservado() == false){
@@ -245,7 +265,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sd2 = true;
                 costo += D2.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva++;
             }
             else {
                 D2.setSeperado(false);
@@ -253,7 +272,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sd2 = false;
                 costo = costo - D2.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva--;
             }
         }
         else if (view.getId() == R.id.imageViewd3 && D3.getReservado() == false){
@@ -263,7 +281,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sd3 = true;
                 costo += D3.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva++;
             }
             else {
                 D3.setSeperado(false);
@@ -271,7 +288,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 sd3 = false;
                 costo = costo - D3.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva--;
             }
         }
         else if (view.getId() == R.id.imageViewe1 && E1.getReservado() == false){
@@ -281,7 +297,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 se1 = true;
                 costo += E1.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva++;
             }
             else {
                 E1.setSeperado(false);
@@ -289,7 +304,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 se1 = false;
                 costo = costo - E1.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva--;
             }
         }
         else if (view.getId() == R.id.imageViewe2 && E2.getReservado() == false){
@@ -299,7 +313,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 se2 = true;
                 costo += E2.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva++;
             }
             else {
                 E2.setSeperado(false);
@@ -307,7 +320,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 se2 = false;
                 costo = costo - E2.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva--;
             }
         }
         else if (view.getId() == R.id.imageViewe3 && E3.getReservado() == false){
@@ -317,7 +329,6 @@ public class ReservaP3Activity extends AppCompatActivity {
                 se3 = true;
                 costo += E3.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva++;
             }
             else {
                 E3.setSeperado(false);
@@ -325,95 +336,99 @@ public class ReservaP3Activity extends AppCompatActivity {
                 se3 = false;
                 costo = costo - E3.getValor();
                 tvCosto.setText(Integer.toString(costo));
-                contReserva--;
             }
         }
         else if (view.getId() == R.id.buttonRes3Compra){
             if ((switch1.isChecked() || switch2.isChecked() || switch3.isChecked()) && costo > 0 && user.getSaldo() >= costo){
 
-                Asiento [] listaReserva = new Asiento[contReserva];
+                String asientos = "";
+                Transferencia estado = new Transferencia();
+
                 int numeroAleatorio = (int) (Math.random()*100+1);
 
                 if(A1.getSeperado() == true){
                     A1.setReservado(true);
                     a1.setImageResource(R.drawable.sillar);
-                    listaReserva[contReserva-1] = A1;
-                    contReserva--;
+                    asientos += A1.getId() + ",";
                 }
                 if(A2.getSeperado() == true){
                     A2.setReservado(true);
                     a2.setImageResource(R.drawable.sillar);
-                    listaReserva[contReserva-1] = A2;
-                    contReserva--;
+                    asientos += A2.getId() + ",";
                 }
                 if(A3.getSeperado() == true){
                     A3.setReservado(true);
                     a3.setImageResource(R.drawable.sillar);
-                    listaReserva[contReserva-1] = A3;
-                    contReserva--;
+                    asientos += A3.getId() + ",";
                 }
                 if(B1.getSeperado() == true){
                     B1.setReservado(true);
                     b1.setImageResource(R.drawable.sillar);
-                    listaReserva[contReserva-1] = B1;
-                    contReserva--;
+                    asientos += B1.getId() + ",";
                 }
                 if(B2.getSeperado() == true){
                     B2.setReservado(true);
                     b2.setImageResource(R.drawable.sillar);
-                    listaReserva[contReserva-1] = B2;
-                    contReserva--;
+                    asientos += B2.getId() + ",";
                 }
                 if(B3.getSeperado() == true){
                     B3.setReservado(true);
                     b3.setImageResource(R.drawable.sillar);
-                    listaReserva[contReserva-1] = B3;
-                    contReserva--;
+                    asientos += B3.getId() + ",";
                 }
                 if(C1.getSeperado() == true){
                     C1.setReservado(true);
                     c1.setImageResource(R.drawable.sillar);
-                    listaReserva[contReserva-1] = C1;
-                    contReserva--;
+                    asientos += C1.getId() + ",";
                 }
                 if(D1.getSeperado() == true){
                     D1.setReservado(true);
                     d1.setImageResource(R.drawable.sillar);
-                    listaReserva[contReserva-1] = D1;
-                    contReserva--;
+                    asientos += D1.getId() + ",";
                 }
                 if(D2.getSeperado() == true){
                     D2.setReservado(true);
                     d2.setImageResource(R.drawable.sillar);
-                    listaReserva[contReserva-1] = D2;
-                    contReserva--;
+                    asientos += D2.getId() + ",";
                 }
                 if(D3.getSeperado() == true){
                     D3.setReservado(true);
                     d3.setImageResource(R.drawable.sillar);
-                    listaReserva[contReserva-1] = D3;
-                    contReserva--;
+                    asientos += D3.getId() + ",";
                 }
                 if(E1.getSeperado() == true){
                     E1.setReservado(true);
                     e1.setImageResource(R.drawable.sillar);
-                    listaReserva[contReserva-1] = E1;
-                    contReserva--;
+                    asientos += E1.getId() + ",";
                 }
                 if(E2.getSeperado() == true){
                     E2.setReservado(true);
                     e2.setImageResource(R.drawable.sillar);
-                    listaReserva[contReserva-1] = E2;
-                    contReserva--;
+                    asientos += E2.getId() + ",";
                 }
                 if(E3.getSeperado() == true){
                     E3.setReservado(true);
                     e3.setImageResource(R.drawable.sillar);
-                    listaReserva[contReserva-1] = E3;
-                    contReserva--;
+                    asientos += E3.getId() + ",";
                 }
 
-                Reserva facturacion = new Reserva(listaReserva, Integer.toString(numeroAleatorio));
+                estado.setA1(A1);
+                estado.setA2(A2);
+                estado.setA3(A3);
+                estado.setB1(B1);
+                estado.setB2(B2);
+                estado.setB3(B3);
+                estado.setC1(C1);
+                estado.setD1(D1);
+                estado.setD2(D2);
+                estado.setD3(D3);
+                estado.setE1(E1);
+                estado.setE2(E2);
+                estado.setE3(E3);
+
+                bund = true;
+
+                Reserva facturacion = new Reserva(asientos, Integer.toString(numeroAleatorio));
 
                 Intent intent = new Intent(ReservaP3Activity.this, FacturaActivity.class);
 
@@ -422,8 +437,11 @@ public class ReservaP3Activity extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("Usuario", user);
                 bundle.putSerializable("Factura", facturacion);
+                bundle.putSerializable("Estado", estado);
+
 
                 intent.putExtras(bundle);
+                asientos = "";
                 startActivity(intent);
             }
             else{

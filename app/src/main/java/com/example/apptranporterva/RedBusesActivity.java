@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class RedBusesActivity extends AppCompatActivity {
 
     Usuario user;
+    Transferencia tmp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class RedBusesActivity extends AppCompatActivity {
 
         Bundle recibir = getIntent().getExtras();
         user = (Usuario) recibir.getSerializable("Usuario");
+        tmp = (Transferencia) recibir.getSerializable("Estado");
 
         TextView tvnombre = (TextView) findViewById(R.id.textViewUserNameRed);
         TextView tvsaldo = (TextView) findViewById(R.id.textViewUserMoneyRed);
@@ -35,6 +37,7 @@ public class RedBusesActivity extends AppCompatActivity {
 
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("Usuario", user);
+                bundle.putSerializable("Estado", tmp);
 
                 intent.putExtras(bundle);
                 startActivity(intent);

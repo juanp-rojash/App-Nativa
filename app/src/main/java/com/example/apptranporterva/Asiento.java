@@ -2,7 +2,7 @@ package com.example.apptranporterva;
 
 import java.io.Serializable;
 
-public class Asiento implements Serializable {
+public final class Asiento implements Serializable {
 
     private String id;
     private boolean reservado;
